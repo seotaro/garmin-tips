@@ -7,6 +7,8 @@ This document is for users of Garmin handheld GPS device and macOS.
 
 When connecting the device via a USB cable (mini-B on the GPS side), the internal memory of the device will be mounted to `/Volumes/GARMIN`.
 
+![image](https://github.com/user-attachments/assets/cd590058-66df-46a5-9443-be01fd2fd443)
+
 - `/Volumes/GARMIN/Garmin/GPX/Archive`: Archived track logs
 - `/Volumes/GARMIN/Garmin/GPX/Current`: Current track logs
 - `/Volumes/GARMIN/Garmin/GPX/Waypoints.gpx`: Waypoints
