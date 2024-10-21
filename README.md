@@ -1,5 +1,7 @@
 # Garmin handheld GPS device Tips
 
+<img src="https://github.com/user-attachments/assets/6c1b7caa-db0f-4f92-982e-c6ee426d29c0" width="300"/>
+
 **Note**:  
 This document is for users of Garmin handheld GPS device and macOS.
 
