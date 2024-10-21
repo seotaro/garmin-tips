@@ -29,6 +29,12 @@ import-to-database:
 		ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=geomdb user=postgres" -append {} \
 			-nlt POINTS -nln track_points -sql "SELECT *, '$(MODEL)' AS model FROM track_points"
 
+	# waypoints	
+	find $(DEST)/GPX -name "Waypoints*.gpx" -print0 | xargs -0 -I {} \
+		ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=geomdb user=postgres" -append {} \
+			-nlt POINTS -nln waypoints -sql "SELECT *, '$(MODEL)' AS model FROM waypoints"
+
 convert-to-geojson:
 	ogr2ogr -f GeoJSON tracks.geojson PG:"host=localhost user=postgres dbname=geomdb" tracks -select "name"
 	ogr2ogr -f GeoJSON track_points.geojson PG:"host=localhost user=postgres dbname=geomdb" track_points -select "ele,time"
+	ogr2ogr -f GeoJSON waypoints.geojson PG:"host=localhost user=postgres dbname=geomdb" waypoints -select "ele,time,name,desc,sym,type"

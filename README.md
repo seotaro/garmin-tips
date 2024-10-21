@@ -11,7 +11,7 @@ When connecting the device via a USB cable (mini-B on the GPS side), the interna
 
 - `/Volumes/GARMIN/Garmin/GPX/Archive`: Archived track logs
 - `/Volumes/GARMIN/Garmin/GPX/Current`: Current track logs
-- `/Volumes/GARMIN/Garmin/GPX/Waypoints.gpx`: Waypoints
+- `/Volumes/GARMIN/Garmin/GPX/Waypoints*.gpx`: Waypoints
 
 **Note**:  
 
@@ -39,6 +39,7 @@ make import-to-database
 - Make sure that PostgreSQL and the PostGIS extension are set up and ready to use beforehand.  
 - Also, ensure that GDAL tools are available and ready to use.
 - Track log segments will be imported into the `tracks` table, and track log points will be imported into the `track_points` table.  
+- Waypoints will be imported into the `waypoints` table.  
 - The device model name will be added as the 'Model' property.
 
 ## Convert to GeoJSON form database
@@ -53,7 +54,7 @@ make convert-to-geojson
 
 1. Backup the GPS data.
 2. Import the GPS data to database.
-3. Open QGIS and add PostgresSQL layer for the tracks or track_points table.
+3. Open QGIS and add PostgresSQL layer for the tracks, track_points table or waypoints table.
 
 **Note**:
 
