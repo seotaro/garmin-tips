@@ -34,7 +34,8 @@ make import-to-database
 
 **Note**:
 
-- Make sure that PostgreSQL and the PostGIS extension are set up and ready to run beforehand.  
+- Make sure that PostgreSQL and the PostGIS extension are set up and ready to use beforehand.  
+- Also, ensure that GDAL tools are available and ready to use.
 - Track log segments will be imported into the `tracks` table, and track log points will be imported into the `track_points` table.  
 - The device model name will be added as the 'Model' property.
 
