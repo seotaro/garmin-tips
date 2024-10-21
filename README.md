@@ -1,7 +1,7 @@
-# Garmin Handy GPS Tips
+# Garmin handheld GPS device Tips
 
 **Note**:  
-Only for macOS.
+This document is for users of Garmin handheld GPS device and macOS.
 
 ## Mount
 
