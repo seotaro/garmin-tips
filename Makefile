@@ -11,7 +11,7 @@ backup:
 	cp -r $(SRC) $(DEST)
 
 import-to-database:
-	- psql -U postgres -d geomdb -c "DROP TABLE tracks; DROP TABLE track_points;"
+	- psql -U postgres -d geomdb -c "DROP TABLE tracks; DROP TABLE track_points; DROP TABLE waypoints;"
 
 	# tracklogs - current
 	find $(DEST)/GPX/Current -name "*.gpx" -print0 | xargs -0 -I {} \
